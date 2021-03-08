@@ -191,7 +191,7 @@ a {
 // Featured Speakers
 
 .speaker-container {
-  padding: 1rem;
+    padding: 3rem 1rem;
 
   .top-speaker-text {
     text-align: center;
@@ -203,6 +203,8 @@ a {
     }
   }
 
+// Layout For Speaker Cards
+
   .speaker-card {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -211,6 +213,12 @@ a {
     margin-top: 2rem;
     box-shadow: lighten($tertiary-color, 40) 0 0 15px;
     padding: 1rem;
+
+    &:hover {
+       box-shadow: lighten($secondary-color, 20) 0 0 25px;
+       transform: scale(1.02);
+        @include easeOut;
+    }
 
     .speaker-image-container {
       width: 100%;
@@ -270,3 +278,5 @@ footer {
     align-items: center;
   }
 }
+
+@import "mobile";

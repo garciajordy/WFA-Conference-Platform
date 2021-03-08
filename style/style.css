@@ -236,7 +236,7 @@ a {
 }
 
 .speaker-container {
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 .speaker-container .top-speaker-text {
@@ -261,6 +261,15 @@ a {
   -webkit-box-shadow: white 0 0 15px;
           box-shadow: white 0 0 15px;
   padding: 1rem;
+}
+
+.speaker-container .speaker-card:hover {
+  -webkit-box-shadow: #f5a79f 0 0 25px;
+          box-shadow: #f5a79f 0 0 25px;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .speaker-container .speaker-card .speaker-image-container {
