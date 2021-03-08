@@ -339,30 +339,30 @@ footer {
 }
 
 .arrow-con {
-    position: absolute;
-    top: -5px;
-    left: 45%;
-    border-radius: 50%;
-    background-color: inherit;
-    height: 1rem;
-    width: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .fa-angle-up {
-        color: #fff;
-        animation: arrow-color;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-    }
+  position: absolute;
+  top: -5px;
+  left: 45%;
+  border-radius: 50%;
+  background-color: inherit;
+  height: 1rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .fa-angle-up {
+    color: #fff;
+    animation: arrow-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
 }
 
 @keyframes arrow-color {
-   25%{color: $primary-color;} 
-   25%{color: $tertiary-color;} 
-   25%{color: $tertiary-color;} 
-   25%{color: $primary-color;} 
+  25% { color: $primary-color; }
+  25% { color: $tertiary-color; }
+  25% { color: $tertiary-color; }
+  25% { color: $primary-color; }
 }
 
 @import "mobile"
