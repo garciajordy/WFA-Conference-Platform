@@ -1,0 +1,47 @@
+// Mixins
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+  }
+
+// Main Colors For Page Layout
+
+$primary-color: #272a31;
+$secondary-color: #ec5242;
+$tertiary-color: #d3d3d3;
+
+// Font Families For Page Layout
+
+$primary-font: 'Cocogoose', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('../font-family/Cocogoose.woff2') format('woff2'),
+        url('../font-family/Cocogoose.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Main Page Attributes
+
+$background-image: url("assets/background-image.png");
+
+* {
+    font-family: $primary-font;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: $tertiary-color;
+}
+
+a {
+    text-decoration: none;
+}

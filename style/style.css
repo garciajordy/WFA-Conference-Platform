@@ -1,42 +1,187 @@
-/*
-    ==============================================
-                ****** RESET ******
-    ==============================================
-*/
-body {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@font-face {
+  font-family: 'Cocogoose';
+  src: url("../font-family/Cocogoose.woff2") format("woff2"), url("../font-family/Cocogoose.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-:root {
-  --color-red: #f42;
-  --bg-color-red: #f42;
-}
-
-*,
-*::before,
-*::after {
+* {
+  font-family: "Cocogoose", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
+html,
+body {
+  background-color: #d3d3d3;
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
-a:hover {
-  color: #333;
+p,
+li,
+a {
+  font-family: "Lato", sans-serif;
 }
 
-/*
-    ==============================================
-                ****** GLOBAL ******
-    ==============================================
-*/
+.menu-icon {
+  z-index: 3;
+  width: 25px;
+  position: fixed;
+  padding: 0.5rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.menu-icon .menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: #ec5242;
+  margin-bottom: 3px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-icon.open {
+  -webkit-transform: rotate(180deg) translate(-10px, 0);
+          transform: rotate(180deg) translate(-10px, 0);
+}
+
+.menu-icon.open .menu-line:nth-child(3) {
+  background-color: ivory;
+  -webkit-transform: translate(-63px, -19px);
+          transform: translate(-63px, -19px);
+  width: 50px;
+}
+
+.menu-icon.open .menu-line:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-icon.open .menu-line:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-4px, 3.9px);
+          transform: rotate(-45deg) translate(-4px, 3.9px);
+}
+
+.main-navigation {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.main-navigation .navigation-top {
+  background-color: #272a31;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  -webkit-transform: translate3d(0, -100px, 0);
+          transform: translate3d(0, -100px, 0);
+}
+
+.main-navigation .navigation-top ul {
+  list-style: none;
+}
+
+.main-navigation .navigation-top ul li {
+  float: left;
+  margin-left: 2.2rem;
+}
+
+.main-navigation .navigation-top ul li a {
+  color: #fff;
+}
+
+.display-nav {
+  -webkit-transform: translate3d(0, 100px, 0);
+          transform: translate3d(0, 100px, 0);
+}
+
+.main-container {
+  background-image: url("../assets/background-image.jpg");
+  background-size: 100% 100%;
+}
+
+.heading-main {
+  padding: 3rem;
+  color: #d3d3d3;
+}
+
+.heading-main h3 {
+  font-family: "Lato", sans-serif;
+  background-color: rgba(186, 186, 186, 0.1);
+}
+
+.heading-main h1 {
+  background-color: rgba(186, 186, 186, 0.1);
+}
+
+.heading-main h1 span {
+  color: #ec5242;
+}
+
+.heading-text {
+  padding: 1rem;
+  -webkit-box-shadow: #fff 0 0 10px;
+          box-shadow: #fff 0 0 10px;
+  background-color: #e7e7e7;
+}
+
+.heading-text h4 {
+  color: #ec5242;
+}
+
+.card {
+  background-color: #272a31;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .fa-network-wired {
+  color: #bababa;
+}
+
+.card h4 {
+  color: #e42a17;
+}
+
+.card p {
+  color: #d3d3d3;
+}
+/*# sourceMappingURL=style.css.map */

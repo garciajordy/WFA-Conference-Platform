@@ -1,0 +1,153 @@
+@import "config";
+
+p,
+li,
+a {
+    font-family: $secondary-font;
+}
+
+// Navigation Bar   
+
+
+// Menu Icon
+.menu-icon {
+    z-index: 3;
+    width: 25px;
+    position: fixed;
+    padding: 0.5rem;
+    @include easeOut;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .menu-line {
+        width: 20px;
+        height: 3px;
+        background-color: $secondary-color;
+        margin-bottom: 3px;
+        @include easeOut;
+    }
+    // To Make My Menu Rotate In An X And UnderLine The Page We Are On
+    &.open {
+        transform: rotate(180deg) translate(-10px,0);
+
+        .menu-line {
+            &:nth-child(3) {
+                background-color: ivory;
+                transform: translate(-63px,-19px);
+                width: 50px;
+            }
+        
+            &:nth-child(2){
+                transform: rotate(45deg);
+            }
+            &:nth-child(1){
+                transform: rotate(-45deg) translate(-4px,3.9px);
+               
+                
+            }
+        }
+      
+    }
+}
+// Navigation 
+
+.main-navigation {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translate3d(0,0,0);
+    @include easeOut;
+        .navigation-top {
+            background-color: $primary-color;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 0.5rem;
+            transform: translate3d(0,-100px,0);
+
+            ul {
+                list-style: none;
+                
+                li {
+                    float: left;
+                    margin-left: 2.2rem;
+    
+                    a {
+                        color: #fff;
+                    }
+                    
+                }
+            }
+        }
+    
+      
+}
+// To Make The Nav Items Appear From The Top
+.display-nav {
+    transform: translate3d(0,100px,0);
+}
+
+// Main 
+
+.main-container {
+    background-image: url("../assets/background-image.jpg");
+    background-size: 100% 100%;
+}
+
+.heading-main {
+    padding: 3rem;
+    color: $tertiary-color;
+    
+    h3 {
+        font-family: $secondary-font;
+        background-color: rgba(darken($tertiary-color, 10),0.1);
+    }
+    h1 {
+        background-color: rgba(darken($tertiary-color, 10),0.1);
+        
+        span {
+         color: $secondary-color;
+    }
+    }
+
+    
+}
+
+.heading-text {
+    padding: 1rem;
+    box-shadow: #fff 0 0 10px;
+    background-color: lighten($tertiary-color, 8);
+
+    h4 {
+        color: $secondary-color;
+    }
+}
+
+.card {
+    background-color: $primary-color;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+    .fa-network-wired {
+        color: darken($tertiary-color, 10);
+    }
+
+    h4 {
+        color: darken($secondary-color,10);
+    }
+
+    p {
+        color: $tertiary-color;
+    }
+}
