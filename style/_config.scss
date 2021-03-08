@@ -39,6 +39,7 @@ $background-image: url("assets/background-image.png");
 
 html,
 body {
+  scroll-behavior: smooth;
   background-color: $tertiary-color;
 }
 

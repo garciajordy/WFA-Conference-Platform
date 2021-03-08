@@ -1,0 +1,92 @@
+@media screen and (min-width:768px) {
+    .arrow-con {
+        left: 48%;
+        transform: scale(1.4);
+        
+
+    }
+
+    .main-container {
+        padding: 5rem;
+
+        h1 {
+            padding-top: 2rem;
+        }
+    }
+
+    .heading-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: "head head head head" "card1 card2 card3 card4";
+
+        h2 {
+            grid-area: head;
+        }
+
+        .card {
+            flex-direction: column;
+        }
+    }
+
+    .speaker-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+        grid-template-areas: "head head" "card1 card2" "card3 card4" "card5 card6";
+        padding: 5rem;
+        grid-gap: 2rem;
+
+        h2 {
+            grid-area: head;
+        }
+
+        .speaker-card {
+            grid-template-areas: "photo text1" "photo text2";
+            grid-template-columns: 1fr 3fr;
+            
+
+            .top-speaker-con {
+                grid-area: text1;
+            }
+
+            .bottom-speaker-con {
+                grid-area: text2;
+            }
+            .speaker-image-container {
+                
+          
+                img {
+                  width: 100px;
+                  height: 100px;
+                }
+            }
+
+        }
+    }
+
+    .founder-con {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .ticket-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "head head";
+        grid-gap: 1rem;
+
+        h1 {
+            grid-area: head;
+        }
+
+        td {
+            white-space: nowrap;
+        }
+    }
+}
