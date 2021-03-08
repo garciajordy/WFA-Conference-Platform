@@ -96,7 +96,7 @@ a {
 }
 
 .main-navigation .navigation-top {
-  background-color: #272a31;
+  background-color: #32363f;
   position: fixed;
   top: 0;
   left: 0;
@@ -236,6 +236,54 @@ a {
   color: #d3d3d3;
 }
 
+.speaker-container {
+  padding: 1rem;
+}
+
+.speaker-container .top-speaker-text {
+  text-align: center;
+  color: #272a31;
+}
+
+.speaker-container .top-speaker-text span {
+  padding-bottom: 0.5rem;
+  border-bottom: #ec5242 3px solid;
+}
+
+.speaker-container .speaker-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  -webkit-box-shadow: white 0 0 15px;
+          box-shadow: white 0 0 15px;
+  padding: 1rem;
+}
+
+.speaker-container .speaker-card .speaker-image-container {
+  width: 100%;
+}
+
+.speaker-container .speaker-card .speaker-image-container img {
+  width: 100%;
+}
+
+.speaker-container .speaker-card .speaker-text-container {
+  color: #272a31;
+}
+
+.speaker-container .speaker-card .speaker-text-container span {
+  color: #ec5242;
+  font-size: 0.8rem;
+}
+
+.speaker-container .speaker-card .speaker-text-container .top-speaker-con {
+  padding-bottom: 0.5rem;
+  border-bottom: #bababa solid 2px;
+}
+
 footer {
   display: -ms-grid;
   display: grid;
@@ -270,6 +318,7 @@ footer .left-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 1rem;
 }
 
 footer .right-footer {
