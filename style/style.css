@@ -4,7 +4,6 @@
   src: url("../font-family/Cocogoose.woff2") format("woff2"), url("../font-family/Cocogoose.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 * {
@@ -255,6 +254,8 @@ a {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   gap: 1rem;
   margin-top: 2rem;
   -webkit-box-shadow: white 0 0 15px;
@@ -282,6 +283,12 @@ a {
 .speaker-container .speaker-card .speaker-text-container .top-speaker-con {
   padding-bottom: 0.5rem;
   border-bottom: #bababa solid 2px;
+}
+
+.speaker-container .speaker-card .bottom-speaker-con {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
 }
 
 footer {

@@ -3,272 +3,270 @@
 p,
 li,
 a {
-    font-family: $secondary-font;
+  font-family: $secondary-font;
 }
 
-// Navigation Bar   
-
+// Navigation Bar
 
 // Menu Icon
 .menu-icon {
-    z-index: 3;
-    width: 25px;
-    position: fixed;
-    padding: 0.5rem;
-    @include easeOut;
+  z-index: 3;
+  width: 25px;
+  position: fixed;
+  padding: 0.5rem;
 
-    &:hover {
-        cursor: pointer;
-    }
+  @include easeOut;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: $secondary-color;
+    margin-bottom: 3px;
+
+    @include easeOut;
+  }
+  // To Make My Menu Rotate In An X And UnderLine The Page We Are On
+  &.open {
+    transform: rotate(180deg) translate(-10px, 0);
 
     .menu-line {
-        width: 20px;
-        height: 3px;
-        background-color: $secondary-color;
-        margin-bottom: 3px;
-        @include easeOut;
-    }
-    // To Make My Menu Rotate In An X And UnderLine The Page We Are On
-    &.open {
-        transform: rotate(180deg) translate(-10px,0);
+      &:nth-child(3) {
+        background-color: ivory;
+        transform: translate(-63px, -19px);
+        width: 50px;
+      }
 
-        .menu-line {
-            &:nth-child(3) {
-                background-color: ivory;
-                transform: translate(-63px,-19px);
-                width: 50px;
-            }
-        
-            &:nth-child(2){
-                transform: rotate(45deg);
-            }
-            &:nth-child(1){
-                transform: rotate(-45deg) translate(-4px,3.9px);
-               
-                
-            }
-        }
-      
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(1) {
+        transform: rotate(-45deg) translate(-4px, 3.9px);
+      }
     }
+  }
 }
-// Navigation 
+// Navigation
 
 .main-navigation {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translate3d(0, 0, 0);
+
+  @include easeOut;
+
+  .navigation-top {
+    background-color: lighten($primary-color, 5);
     position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.5rem;
     top: 0;
     left: 0;
     right: 0;
-    transform: translate3d(0,0,0);
-    @include easeOut;
-        .navigation-top {
-            background-color: lighten($primary-color,5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 0.5rem;
-            transform: translate3d(0,-100px,0);
+    padding: 0.5rem;
+    transform: translate3d(0, -100px, 0);
 
-            ul {
-                list-style: none;
-                
-                li {
-                    float: left;
-                    margin-left: 2.2rem;
-    
-                    a {
-                        color: #fff;
-                    }
-                    
-                }
-            }
+    ul {
+      list-style: none;
+
+      li {
+        float: left;
+        margin-left: 2.2rem;
+
+        a {
+          color: #fff;
         }
-    
-      
+      }
+    }
+  }
 }
 // To Make The Nav Items Appear From The Top
 .display-nav {
-    transform: translate3d(0,100px,0);
+  transform: translate3d(0, 100px, 0);
 }
 
-// Main 
+// Main
 
 .main-container {
-    background-image: url("../assets/background-image.jpg");
-    background-size: 100% 100%;
+  background-image: url("../assets/background-image.jpg");
+  background-size: 100% 100%;
 }
 
 .heading-main {
-    padding: 3rem;
-    color: $tertiary-color;
-    
-    h3 {
-        font-family: $secondary-font;
-        background-color: rgba(darken($tertiary-color, 10),0.1);
-    }
-    h1 {
-        background-color: rgba(darken($tertiary-color, 10),0.1);
-        
-        span {
-         color: $secondary-color;
-    }
-    }
+  padding: 3rem;
+  color: $tertiary-color;
 
-    
+  h3 {
+    font-family: $secondary-font;
+    background-color: rgba(darken($tertiary-color, 10), 0.1);
+  }
+
+  h1 {
+    background-color: rgba(darken($tertiary-color, 10), 0.1);
+
+    span {
+      color: $secondary-color;
+    }
+  }
 }
 
 .heading-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
 }
 
 .heading-text {
-    padding: 1rem;
-    box-shadow: #fff 0 0 10px;
-    background-color: lighten($tertiary-color, 8);
-    @include easeOut;
+  padding: 1rem;
+  box-shadow: #fff 0 0 10px;
+  background-color: lighten($tertiary-color, 8);
 
-    &:hover {
-        box-shadow: #000 0 0 10px;
-        
-    }
+  @include easeOut;
 
-    h4 {
-        color: $secondary-color;
-    }
+  &:hover {
+    box-shadow: #000 0 0 10px;
+  }
+
+  h4 {
+    color: $secondary-color;
+  }
 }
 
 .card-container {
-    padding: 3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: $primary-color;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: $primary-color;
 
-    h2 {
-        text-align: center;
-        color: lighten($tertiary-color, 10);
-        margin-bottom: 1rem;
+  h2 {
+    text-align: center;
+    color: lighten($tertiary-color, 10);
+    margin-bottom: 1rem;
 
-        span {
-            padding-bottom: 0.5rem;
-            border-bottom: $secondary-color 3px solid;
-        }
+    span {
+      padding-bottom: 0.5rem;
+      border-bottom: $secondary-color 3px solid;
     }
+  }
 }
 
 .card {
-    background-color: lighten($primary-color,10);
-    border-radius: 8px;
-    padding: 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    @include easeOut;
+  background-color: lighten($primary-color, 10);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 
-    &:hover {
-        box-shadow: #fff 0 0 10px;
-    }
+  @include easeOut;
 
-    i {
-        color: lighten($tertiary-color, 10);
-    }
+  &:hover {
+    box-shadow: #fff 0 0 10px;
+  }
 
-    h4 {
-        color: darken($secondary-color,10);
-    }
+  i {
+    color: lighten($tertiary-color, 10);
+  }
 
-    p {
-        color: $tertiary-color;
-    }
- }
+  h4 {
+    color: darken($secondary-color, 10);
+  }
+
+  p {
+    color: $tertiary-color;
+  }
+}
 
 // Featured Speakers
 
 .speaker-container {
+  padding: 1rem;
+
+  .top-speaker-text {
+    text-align: center;
+    color: $primary-color;
+
+    span {
+      padding-bottom: 0.5rem;
+      border-bottom: $secondary-color 3px solid;
+    }
+  }
+
+  .speaker-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    box-shadow: lighten($tertiary-color, 40) 0 0 15px;
     padding: 1rem;
 
-    .top-speaker-text {
-        text-align: center;
-        color: $primary-color;
+    .speaker-image-container {
+      width: 100%;
 
-        span {
-            padding-bottom: 0.5rem;
-            border-bottom: $secondary-color 3px solid;
-        }
+      img {
+        width: 100%;
+      }
     }
 
-    .speaker-card {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1rem;
-        margin-top: 2rem;
-        box-shadow: lighten($tertiary-color,40) 0 0 15px;
-        padding: 1rem;
+    .speaker-text-container {
+      color: $primary-color;
 
-        .speaker-image-container {
-            width: 100%;
+      span {
+        color: $secondary-color;
+        font-size: 0.8rem;
+      }
 
-            img {
-                width: 100%;
-            }
-        }
-
-        .speaker-text-container {
-            color: $primary-color;
-
-            span {
-                color: $secondary-color;
-                font-size: 0.8rem;
-            }
-
-            .top-speaker-con {
-                padding-bottom: 0.5rem;
-                border-bottom: darken($tertiary-color, 10) solid 2px;
-            }
-        }
+      .top-speaker-con {
+        padding-bottom: 0.5rem;
+        border-bottom: darken($tertiary-color, 10) solid 2px;
+      }
     }
 
-    
+    .bottom-speaker-con {
+        grid-column: 1/3;
+    }
+  }
 }
 
 // Footer
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr;
-    grid-template-areas: "topf topf" "leftf rightf";
-    padding: 1rem;
-    background-color: darken($primary-color,10);
-    color: darken($tertiary-color,10);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "topf topf" "leftf rightf";
+  padding: 1rem;
+  background-color: darken($primary-color, 10);
+  color: darken($tertiary-color, 10);
 
-    .top-footer {
-        grid-area: topf;
-        text-align: center;
-    }
+  .top-footer {
+    grid-area: topf;
+    text-align: center;
+  }
 
-    .left-footer {
-        grid-area: leftf;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 1rem;
-    }
+  .left-footer {
+    grid-area: leftf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
 
-    .right-footer {
-        grid-area: rightf;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+  .right-footer {
+    grid-area: rightf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-
