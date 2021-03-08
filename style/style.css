@@ -23,9 +23,170 @@ a {
   text-decoration: none;
 }
 
+main.about {
+  text-align: center;
+}
+
+.top-about-container {
+  padding-top: 6rem;
+  padding: 2rem;
+}
+
+.top-about-container p {
+  margin-bottom: 1rem;
+  color: #3e424d;
+}
+
+.top-about-container h1,
+.top-about-container H2 {
+  text-shadow: #545b6a 3px 3px 0;
+  color: #ec5242;
+  margin-bottom: 2rem;
+}
+
+.middle-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.middle-about img {
+  width: 100%;
+}
+
+.founder-con {
+  padding: 2rem;
+}
+
+.founder-con .founder-card {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.founder-con .founder-card img {
+  max-width: 40%;
+  border-radius: 50%;
+}
+
+.founder-con .founder-card h4 {
+  color: #ec5242;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.founder-con .founder-card p {
+  color: #272a31;
+  width: 80%;
+}
+
+table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+table tr,
+table td,
+table th {
+  border: #272a31 1px solid;
+  padding: 0.5rem;
+}
+
+main.tickets {
+  text-align: center;
+}
+
+.ticket-container {
+  padding: 3rem 1rem;
+}
+
+.ticket-container span {
+  padding-bottom: 0.5rem;
+  border-bottom: #ec5242 3px solid;
+}
+
+table {
+  margin-top: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+table tr,
+table td,
+table th {
+  border: #272a31 1px solid;
+  padding: 0.5rem;
+  width: 30%;
+}
+
+table th {
+  color: #ec5242;
+}
+
+table .price {
+  color: #e42a17;
+}
+
+table .course {
+  color: #b62212;
+}
+
+table td {
+  background-color: white;
+}
+
+table th {
+  background-color: #ededed;
+}
+
+.buy-button {
+  color: #3e424d;
+  position: relative;
+  z-index: 2;
+}
+
+.buy-button:hover {
+  color: #ededed;
+}
+
+.buy-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  z-index: -1;
+  background-color: #e42a17;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border-radius: 10px;
+  -webkit-box-shadow: black 0 0 15px;
+          box-shadow: black 0 0 15px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.buy-button:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 p,
 li,
-a {
+a,
+td {
   font-family: "Lato", sans-serif;
 }
 
@@ -51,26 +212,76 @@ a {
   transition: all 0.5s ease-out;
 }
 
-.menu-icon.open {
-  -webkit-transform: rotate(180deg) translate(-10px, 0);
-          transform: rotate(180deg) translate(-10px, 0);
+.main .open .first-lines {
+  -webkit-transform: rotate(180deg) translate(-10px, -8px);
+          transform: rotate(180deg) translate(-10px, -8px);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-.menu-icon.open .menu-line:nth-child(3) {
-  background-color: ivory;
-  -webkit-transform: translate(-63px, -19px);
-          transform: translate(-63px, -19px);
-  width: 50px;
+.main .open .first-lines .menu-first {
+  -webkit-transform: rotate(-45deg) translate(-4px, 3.9px);
+          transform: rotate(-45deg) translate(-4px, 3.9px);
 }
 
-.menu-icon.open .menu-line:nth-child(2) {
+.main .open .first-lines .menu-second {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.menu-icon.open .menu-line:nth-child(1) {
+.main .open .menu-third {
+  background-color: ivory;
+  -webkit-transform: translate(33px, 8px);
+          transform: translate(33px, 8px);
+  width: 50px;
+}
+
+.about .open .first-lines {
+  -webkit-transform: rotate(180deg) translate(-10px, -8px);
+          transform: rotate(180deg) translate(-10px, -8px);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.about .open .first-lines .menu-first {
   -webkit-transform: rotate(-45deg) translate(-4px, 3.9px);
           transform: rotate(-45deg) translate(-4px, 3.9px);
+}
+
+.about .open .first-lines .menu-second {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.about .open .menu-third {
+  background-color: ivory;
+  -webkit-transform: translate(111px, 8px);
+          transform: translate(111px, 8px);
+  width: 50px;
+}
+
+.tickets .open .first-lines {
+  -webkit-transform: rotate(180deg) translate(-10px, -8px);
+          transform: rotate(180deg) translate(-10px, -8px);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.tickets .open .first-lines .menu-first {
+  -webkit-transform: rotate(-45deg) translate(-4px, 3.9px);
+          transform: rotate(-45deg) translate(-4px, 3.9px);
+}
+
+.tickets .open .first-lines .menu-second {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.tickets .open .menu-third {
+  background-color: ivory;
+  -webkit-transform: translate(193px, 8px);
+          transform: translate(193px, 8px);
+  width: 50px;
 }
 
 .main-navigation {

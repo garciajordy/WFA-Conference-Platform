@@ -1,8 +1,11 @@
 @import "config";
+@import "about";
+@import "tickets";
 
 p,
 li,
-a {
+a,
+td {
   font-family: $secondary-font;
 }
 
@@ -29,27 +32,91 @@ a {
 
     @include easeOut;
   }
-  // To Make My Menu Rotate In An X And UnderLine The Page We Are On
-  &.open {
-    transform: rotate(180deg) translate(-10px, 0);
-
-    .menu-line {
-      &:nth-child(3) {
-        background-color: ivory;
-        transform: translate(-63px, -19px);
-        width: 50px;
-      }
-
-      &:nth-child(2) {
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(1) {
-        transform: rotate(-45deg) translate(-4px, 3.9px);
-      }
-    }
-  }
+ 
+  
 }
+
+ // To Make My Menu Rotate In An X And UnderLine The Page We Are On
+ .main {
+    .open {
+        
+        .first-lines {
+             transform: rotate(180deg) translate(-10px, -8px);
+             @include easeOut;
+            
+             
+        
+              .menu-first {
+                transform: rotate(-45deg) translate(-4px, 3.9px);
+              }
+              .menu-second {
+                transform: rotate(45deg);
+              }
+        }
+
+        .menu-third {
+            background-color: ivory;
+            transform: translate(33px , 8px);
+            width: 50px;
+        }
+       
+        
+      }
+  }
+
+  .about {
+    .open {
+        
+        .first-lines {
+             transform: rotate(180deg) translate(-10px, -8px);
+             @include easeOut;
+            
+             
+        
+              .menu-first {
+                transform: rotate(-45deg) translate(-4px, 3.9px);
+              }
+              .menu-second {
+                transform: rotate(45deg);
+              }
+        }
+
+        .menu-third {
+            background-color: ivory;
+            transform: translate(111px , 8px);
+            width: 50px;
+        }
+       
+        
+      }
+  }
+
+  .tickets {
+    .open {
+        
+        .first-lines {
+             transform: rotate(180deg) translate(-10px, -8px);
+             @include easeOut;
+            
+             
+        
+              .menu-first {
+                transform: rotate(-45deg) translate(-4px, 3.9px);
+              }
+              .menu-second {
+                transform: rotate(45deg);
+              }
+        }
+
+        .menu-third {
+            background-color: ivory;
+            transform: translate(193px , 8px);
+            width: 50px;
+        }
+       
+        
+      }
+  }
 // Navigation
 
 .main-navigation {
