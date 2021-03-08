@@ -1,61 +1,56 @@
 main.about {
-        text-align: center;
-        
+  text-align: center;
 }
 
 .top-about-container {
-    padding-top: 6rem;
-    padding: 2rem;
+  padding: 6rem 2rem 2rem;
 
-    p {
-        margin-bottom: 1rem;
-        color: lighten($primary-color, 10);
-    }
+  p {
+    margin-bottom: 1rem;
+    color: lighten($primary-color, 10);
+  }
 
-    h1,
-    H2 {
-        text-shadow: lighten($primary-color,20) 3px 3px 0;
-        color: $secondary-color;
-        margin-bottom: 2rem;
-    }
-
+  h1,
+  h2 {
+    text-shadow: lighten($primary-color, 20) 3px 3px 0;
+    color: $secondary-color;
+    margin-bottom: 2rem;
+  }
 }
 
 .middle-about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .founder-con {
-    padding: 2rem;
+  padding: 2rem;
 
-    .founder-card {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1rem;
+  .founder-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 
-        img {
-            max-width: 40%;
-            border-radius: 50%;
-        }
-
-        h4 {
-            color: $secondary-color;
-            padding: 1rem;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: $primary-color;
-            width: 80%;
-
-        }
+    img {
+      max-width: 40%;
+      border-radius: 50%;
     }
-}
 
+    h4 {
+      color: $secondary-color;
+      padding: 1rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $primary-color;
+      width: 80%;
+    }
+  }
+}

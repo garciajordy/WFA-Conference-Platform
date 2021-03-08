@@ -1,77 +1,73 @@
 main.tickets {
-    text-align: center;
+  text-align: center;
 }
 
 .ticket-container {
-    padding: 3rem 1rem;
+  padding: 3rem 1rem;
 
-    span {
-        padding-bottom: 0.5rem;
-        border-bottom: $secondary-color 3px solid;
-    }
+  span {
+    padding-bottom: 0.5rem;
+    border-bottom: $secondary-color 3px solid;
+  }
 }
 
 table {
-    margin-top: 2rem;
-    width: 100%;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
 
-    tr,
-    td,
-    th {
-        border: $primary-color 1px solid;
-        padding: 0.5rem;
-        width: 30%;
-    }
-   
-    th {
-        color: $secondary-color;
-    }
-    .price {
-        color: darken($secondary-color, 10);
-    }
+  tr,
+  td,
+  th {
+    border: $primary-color 1px solid;
+    padding: 0.5rem;
+    width: 30%;
+  }
 
-    .course {
-        color: darken($secondary-color, 20);
-    }
+  th {
+    color: $secondary-color;
+    background-color: lighten($tertiary-color, 10);
+  }
 
-    td {
-        background-color: lighten($tertiary-color, 20);
-    }
-    th {
-        background-color: lighten($tertiary-color, 10);
-    }
-    
-   
+  .price {
+    color: darken($secondary-color, 10);
+  }
+
+  .course {
+    color: darken($secondary-color, 20);
+  }
+
+  td {
+    background-color: lighten($tertiary-color, 20);
+  }
 }
 
 .buy-button {
-    color: lighten($primary-color, 10);
-    position: relative;
-    z-index: 2;
+  color: lighten($primary-color, 10);
+  position: relative;
+  z-index: 2;
 
-    &:hover {
-        color: lighten($tertiary-color, 10);
-    }
+  &:hover {
+    color: lighten($tertiary-color, 10);
+  }
 
-    &::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        padding: 0.5rem;
-        z-index: -1;
-        background-color: darken($secondary-color,10);
-        position: absolute;
-        top: -6px;
-        left: -6px;
-        border-radius: 10px;
-        box-shadow: rgb(0, 0, 0) 0 0 15px;
-        transform: scale(0);
-        transition: 250ms;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    z-index: -1;
+    background-color: darken($secondary-color, 10);
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0) 0 0 15px;
+    transform: scale(0);
+    transition: 250ms;
+  }
 
-        
-   }
-   &:hover::before {
+  &:hover::before {
     transform: scale(1);
-}
+  }
 }

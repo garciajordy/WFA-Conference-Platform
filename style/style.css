@@ -28,8 +28,7 @@ main.about {
 }
 
 .top-about-container {
-  padding-top: 6rem;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem;
 }
 
 .top-about-container p {
@@ -38,7 +37,7 @@ main.about {
 }
 
 .top-about-container h1,
-.top-about-container H2 {
+.top-about-container h2 {
   text-shadow: #545b6a 3px 3px 0;
   color: #ec5242;
   margin-bottom: 2rem;
@@ -88,18 +87,6 @@ main.about {
 .founder-con .founder-card p {
   color: #272a31;
   width: 80%;
-}
-
-table {
-  margin-top: 2rem;
-  width: 100%;
-}
-
-table tr,
-table td,
-table th {
-  border: #272a31 1px solid;
-  padding: 0.5rem;
 }
 
 main.tickets {
