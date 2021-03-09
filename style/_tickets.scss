@@ -6,75 +6,105 @@ main.tickets {
 
 .ticket-container {
   padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     font-family: "lato";
-  }
+    margin-top: 2rem;
+  
 
-  span {
-    font-family: "lato";
-    padding-bottom: 0.5rem;
-    border-bottom: $secondary-color 3px solid;
+      span {
+        font-family: "lato";
+        padding-bottom: 0.5rem;
+        border-bottom: $secondary-color 3px solid;
+        
+      }
+    }
+
+    .ticket-instruction {
+      border: darken($tertiary-color,10) solid 1px;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      margin-top: 2rem;
+
+      span {
+        font-family: "lato";
+        color: $secondary-color;
+        padding-right: 1rem;
+      }
+    }
+
+  .ticket-small-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 table {
-  margin-top: 2rem;
-  width: 100%;
-  margin-bottom: 1rem;
-
-  tr,
-  td,
-  th {
-    border: $primary-color 1px solid;
-    padding: 0.5rem;
-    width: 30%;
-  }
-
-  th {
-    color: $secondary-color;
-    background-color: lighten($tertiary-color, 10);
-  }
-
-  .price {
-    color: darken($secondary-color, 10);
-  }
-
-  .course {
-    color: darken($secondary-color, 20);
-  }
-
-  td {
-    background-color: lighten($tertiary-color, 20);
-  }
-}
-
-.buy-button {
-  color: lighten($primary-color, 10);
+  border-collapse: collapse;
   position: relative;
   z-index: 2;
-
-  &:hover {
-    color: lighten($tertiary-color, 10);
-  }
-
+  
   &::before {
     content: "";
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-    z-index: -1;
-    background-color: darken($secondary-color, 10);
     position: absolute;
-    top: -6px;
-    left: -6px;
-    border-radius: 10px;
-    box-shadow: rgb(0, 0, 0) 0 0 15px;
-    transform: scale(0);
-    transition: 250ms;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    z-index: -1;
+    background-image: linear-gradient(to right,blue, red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,
+    red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,
+    red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red);
   }
+  tr {
+    background-color: lighten($tertiary-color,15);
+  }
+  tr:first-child {
+    background-color: lighten($tertiary-color,5);
+  }
+  td,
+  th {
+    padding: 1rem;
+    border: darken($tertiary-color,10) 1px solid;
+  }
+  
+}
 
-  &:hover::before {
-    transform: scale(1);
+.food-con {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin-top: 2rem;
+  border: darken($tertiary-color,10) solid 1px;
+
+  .top-food {
+    text-align: center;
+    
+    h4 {
+     font-family: "lato";
+     background-color: lighten($tertiary-color,10);
+     padding: 1rem;
+    }
+  }
+  .bottom-food {
+    background-color: lighten($tertiary-color,20);
+    display: flex;
+    
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        padding: 1rem 2rem;
+      }
+
+    }
   }
 }

@@ -70,21 +70,6 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .ticket-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "head head";
-    grid-gap: 1rem;
-
-    h1 {
-      grid-area: head;
-    }
-
-    td {
-      white-space: nowrap;
-    }
-  }
-
   .navigation-top {
     display: none;
   }

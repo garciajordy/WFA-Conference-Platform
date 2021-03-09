@@ -99,87 +99,132 @@ main.tickets {
 
 .ticket-container {
   padding: 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ticket-container h1 {
   font-family: "lato";
+  margin-top: 2rem;
 }
 
-.ticket-container span {
+.ticket-container h1 span {
   font-family: "lato";
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
 
-table {
+.ticket-container .ticket-instruction {
+  border: #bababa solid 1px;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+.ticket-container .ticket-instruction span {
+  font-family: "lato";
+  color: #ec5242;
+  padding-right: 1rem;
+}
+
+.ticket-container .ticket-small-container {
   margin-top: 2rem;
   width: 100%;
-  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-table tr,
-table td,
-table th {
-  border: #272a31 1px solid;
-  padding: 0.5rem;
-  width: 30%;
-}
-
-table th {
-  color: #ec5242;
-  background-color: #ededed;
-}
-
-table .price {
-  color: #e42a17;
-}
-
-table .course {
-  color: #b62212;
-}
-
-table td {
-  background-color: white;
-}
-
-.buy-button {
-  color: #3e424d;
+table {
+  border-collapse: collapse;
   position: relative;
   z-index: 2;
 }
 
-.buy-button:hover {
-  color: #ededed;
-}
-
-.buy-button::before {
+table::before {
   content: "";
-  width: 100%;
-  height: 100%;
-  padding: 0.5rem;
-  z-index: -1;
-  background-color: #e42a17;
   position: absolute;
-  top: -6px;
-  left: -6px;
-  border-radius: 10px;
-  -webkit-box-shadow: black 0 0 15px;
-          box-shadow: black 0 0 15px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: 250ms;
-  transition: 250ms;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  z-index: -1;
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), to(red));
+  background-image: linear-gradient(to right, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red);
 }
 
-.buy-button:hover::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+table tr {
+  background-color: #f9f9f9;
+}
+
+table tr:first-child {
+  background-color: #e0e0e0;
+}
+
+table td,
+table th {
+  padding: 1rem;
+  border: #bababa 1px solid;
+}
+
+.food-con {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+  margin-top: 2rem;
+  border: #bababa solid 1px;
+}
+
+.food-con .top-food {
+  text-align: center;
+}
+
+.food-con .top-food h4 {
+  font-family: "lato";
+  background-color: #ededed;
+  padding: 1rem;
+}
+
+.food-con .bottom-food {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.food-con .bottom-food ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.food-con .bottom-food ul li {
+  padding: 1rem 2rem;
 }
 
 p,
 li,
 a,
-td {
+td,
+th {
   font-family: "Lato", sans-serif;
 }
 
@@ -847,23 +892,6 @@ td {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-  }
-  .ticket-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "head head";
-    grid-gap: 1rem;
-  }
-  .ticket-container h1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: head;
-  }
-  .ticket-container td {
-    white-space: nowrap;
   }
   .navigation-top {
     display: none;
