@@ -2,7 +2,7 @@
 
 # World Flair Association
 
-> This is a project where i created a conference page for flair bartending.
+> This is a project where I created a conference page for flair bartending.
 
 ### Home Page
 | ![screenshot](assets/main-mobile-top.PNG) | ![screenshot](assets/Main-desktop-top.PNG) |
@@ -52,11 +52,11 @@ To get a local copy up and running follow these simple example steps.
 - Clone in the terminal or download this entire [GitHub Repo](https://github.com/garciajordy/WFA-Conference-Platform) and go to the index.html file.
 
 ### Install
-- Set up liveserver as an extension in your VS Code.
-- If you dont have the live server extension, or are using another software just view directly in your browser.
+- Set up a live server as an extension in your VS Code.
+- If you don't have the live server extension, or are using another software just view it directly in your browser.
 
 ### Usage
-- Right click and open the index.html in your browser to view.
+- Right-click and open the index.html in your browser to view.
 
 
 ## Authors

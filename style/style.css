@@ -26,11 +26,10 @@ a {
 
 main.about {
   text-align: center;
-  margin-top: 3rem;
 }
 
 .top-about-container {
-  padding: 6rem 2rem 2rem;
+  padding: 4rem 2rem 2rem;
 }
 
 .top-about-container p {
@@ -43,6 +42,7 @@ main.about {
   text-shadow: #545b6a 3px 3px 0;
   color: #ec5242;
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .middle-about {
@@ -946,6 +946,9 @@ th {
   }
   .right-footer {
     padding: 2rem;
+  }
+  .top-about-container {
+    padding-top: 8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
