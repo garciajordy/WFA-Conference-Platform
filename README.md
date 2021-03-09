@@ -26,6 +26,8 @@
 ### Ticket Page
 | ![screenshot](assets/ticket-mobile-top.PNG) | ![screenshot](assets/ticket-desktop-top.PNG) |
 |:---:|:---:|
+| ![screenshot](assets/ticket-mobile-bottom.PNG) | ![screenshot](assets/ticket-desktop-bottom.PNG) |
+|:---:|:---:|
 | Mobile view | Desktop view |
 ### The Footer
 | ![screenshot](assets/footer-mobile.PNG) | ![screenshot](assets/footer-desktop.PNG) |
