@@ -143,6 +143,84 @@ td {
     }
   }
 }
+
+.big-screen-navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  grid-template-rows: 1fr 3fr;
+}
+.big-screen-top {
+  background-color: $primary-color;
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+
+    .fa-facebook-f,
+    .fa-twitter {
+      color: #fff;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+    li {
+      margin-right: 1rem;
+    }
+    a {
+      color: $tertiary-color;
+      font-size: 12px;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+}
+.big-screen-bottom {
+  box-shadow: $primary-color 0 0 15px;
+  background-color: lighten($tertiary-color, 20);
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+  
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      color: $primary-color;
+
+     &.active {
+      color: $secondary-color;
+    }
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+
+  img {
+    text-align: center;
+    max-width: 100px;
+    padding: 0.5rem;
+  }
+}
+
+
+
 // To Make The Nav Items Appear From The Top
 .display-nav {
   transform: translate3d(0, 100px, 0);

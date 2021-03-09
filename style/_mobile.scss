@@ -84,4 +84,18 @@
       white-space: nowrap;
     }
   }
+
+  .navigation-top {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  .big-screen-navigation {
+    display: grid;
+  }
+  .big-screen-bottom {
+    display: grid;
+  }
 }

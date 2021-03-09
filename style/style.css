@@ -26,6 +26,7 @@ a {
 
 main.about {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .top-about-container {
@@ -92,6 +93,8 @@ main.about {
 
 main.tickets {
   text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
 }
 
 .ticket-container {
@@ -312,6 +315,102 @@ td {
 
 .main-navigation .navigation-top ul li a {
   color: #272a31;
+}
+
+.big-screen-navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+}
+
+.big-screen-top {
+  background-color: #272a31;
+}
+
+.big-screen-top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.big-screen-top ul .fa-facebook-f,
+.big-screen-top ul .fa-twitter {
+  color: #fff;
+}
+
+.big-screen-top ul .fa-facebook-f:hover,
+.big-screen-top ul .fa-twitter:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-top ul li {
+  margin-right: 1rem;
+}
+
+.big-screen-top ul a {
+  color: #d3d3d3;
+  font-size: 12px;
+}
+
+.big-screen-top ul a:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-bottom {
+  -webkit-box-shadow: #272a31 0 0 15px;
+          box-shadow: #272a31 0 0 15px;
+  background-color: white;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+
+.big-screen-bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.big-screen-bottom ul a {
+  color: #272a31;
+}
+
+.big-screen-bottom ul a.active {
+  color: #ec5242;
+}
+
+.big-screen-bottom ul a:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-bottom img {
+  text-align: center;
+  max-width: 100px;
+  padding: 0.5rem;
 }
 
 .display-nav {
@@ -707,6 +806,20 @@ footer .right-footer {
   }
   .ticket-container td {
     white-space: nowrap;
+  }
+  .navigation-top {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .big-screen-navigation {
+    display: -ms-grid;
+    display: grid;
+  }
+  .big-screen-bottom {
+    display: -ms-grid;
+    display: grid;
   }
 }
 /*# sourceMappingURL=style.css.map */
