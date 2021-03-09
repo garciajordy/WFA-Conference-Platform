@@ -1,6 +1,5 @@
 main.tickets {
   text-align: center;
-  margin-top: 3rem;
   padding-top: 2rem;
 }
 
@@ -69,7 +68,7 @@ table {
   }
   td,
   th {
-    padding: 1rem;
+    padding: 0.5rem;
     border: darken($tertiary-color,10) 1px solid;
   }
   
@@ -102,9 +101,12 @@ table {
       align-items: center;
 
       li {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
       }
 
     }
   }
+}
+.none {
+  display: none;
 }

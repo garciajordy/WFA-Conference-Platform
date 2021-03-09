@@ -93,7 +93,6 @@ main.about {
 
 main.tickets {
   text-align: center;
-  margin-top: 3rem;
   padding-top: 2rem;
 }
 
@@ -174,7 +173,7 @@ table tr:first-child {
 
 table td,
 table th {
-  padding: 1rem;
+  padding: 0.5rem;
   border: #bababa 1px solid;
 }
 
@@ -217,7 +216,11 @@ table th {
 }
 
 .food-con .bottom-food ul li {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+}
+
+.none {
+  display: none;
 }
 
 p,
@@ -711,7 +714,8 @@ th {
 }
 
 .top-footer .logo-con .logo-con-1 h2 {
-  font-size: 100;
+  font-weight: 100;
+  font-size: 1.2rem;
 }
 
 .bottom-footer {
@@ -915,6 +919,14 @@ th {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 1rem;
+  }
+  .food-con .bottom-food ul li {
+    padding: 1rem 2rem;
+  }
+  table td,
+  table th {
+    padding: 1rem;
+    border: #bababa 1px solid;
   }
 }
 /*# sourceMappingURL=style.css.map */
