@@ -283,11 +283,13 @@ td {
   background-color: $primary-color;
 
   h2 {
+    font-family: "lato";
     text-align: center;
     color: lighten($tertiary-color, 10);
     margin-bottom: 1rem;
 
     span {
+      font-family: "lato";
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }
@@ -327,11 +329,16 @@ td {
 .speaker-container {
   padding: 3rem 1rem;
 
+  h2 {
+    font-family: "lato";
+  }
+
   .top-speaker-text {
     text-align: center;
     color: $primary-color;
 
     span {
+      font-family: "lato";
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }

@@ -7,7 +7,12 @@ main.tickets {
 .ticket-container {
   padding: 3rem 1rem;
 
+  h1 {
+    font-family: "lato";
+  }
+
   span {
+    font-family: "lato";
     padding-bottom: 0.5rem;
     border-bottom: $secondary-color 3px solid;
   }

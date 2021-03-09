@@ -101,7 +101,12 @@ main.tickets {
   padding: 3rem 1rem;
 }
 
+.ticket-container h1 {
+  font-family: "lato";
+}
+
 .ticket-container span {
+  font-family: "lato";
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
@@ -486,12 +491,14 @@ td {
 }
 
 .card-container h2 {
+  font-family: "lato";
   text-align: center;
   color: #ededed;
   margin-bottom: 1rem;
 }
 
 .card-container h2 span {
+  font-family: "lato";
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
@@ -535,12 +542,17 @@ td {
   padding: 3rem 1rem;
 }
 
+.speaker-container h2 {
+  font-family: "lato";
+}
+
 .speaker-container .top-speaker-text {
   text-align: center;
   color: #272a31;
 }
 
 .speaker-container .top-speaker-text span {
+  font-family: "lato";
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
