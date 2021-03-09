@@ -176,7 +176,7 @@ td {
 }
 
 .menu-icon {
-  z-index: 3;
+  z-index: 333;
   width: 25px;
   position: fixed;
   padding: 0.5rem;
@@ -215,7 +215,6 @@ td {
 }
 
 .main .open .menu-third {
-  background-color: ivory;
   -webkit-transform: translate(33px, 8px);
           transform: translate(33px, 8px);
   width: 50px;
@@ -239,7 +238,6 @@ td {
 }
 
 .about .open .menu-third {
-  background-color: ivory;
   -webkit-transform: translate(111px, 8px);
           transform: translate(111px, 8px);
   width: 50px;
@@ -263,7 +261,6 @@ td {
 }
 
 .tickets .open .menu-third {
-  background-color: ivory;
   -webkit-transform: translate(193px, 8px);
           transform: translate(193px, 8px);
   width: 50px;
@@ -291,7 +288,10 @@ td {
 }
 
 .main-navigation .navigation-top {
-  background-color: #32363f;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: #050506 0 0 10px;
+          box-shadow: #050506 0 0 10px;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -311,12 +311,13 @@ td {
 }
 
 .main-navigation .navigation-top ul li a {
-  color: #fff;
+  color: #272a31;
 }
 
 .display-nav {
   -webkit-transform: translate3d(0, 100px, 0);
           transform: translate3d(0, 100px, 0);
+  z-index: 99;
 }
 
 .main-container {
