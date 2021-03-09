@@ -72,7 +72,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/garciajordy/WFA-Conference-Platform/issues).
 
 ## Show your support
 
@@ -80,10 +80,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to Microverse
+- Hat tip to Cindy Shin’s
 - Inspiration
 - etc
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](./LICENSE) licensed.
