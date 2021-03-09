@@ -77,9 +77,11 @@
   .menu-icon {
     display: none;
   }
+
   .big-screen-navigation {
     display: grid;
   }
+
   .big-screen-bottom {
     display: grid;
   }
@@ -104,8 +106,15 @@
     td,
     th {
       padding: 1rem;
-      border: darken($tertiary-color,10) 1px solid;
+      border: darken($tertiary-color, 10) 1px solid;
     }
   }
-}
 
+  .none {
+    display: block;
+  }
+
+  .right-footer {
+    padding: 2rem;
+  }
+}

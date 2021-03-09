@@ -111,12 +111,12 @@ main.tickets {
 }
 
 .ticket-container h1 {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   margin-top: 2rem;
 }
 
 .ticket-container h1 span {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
@@ -129,7 +129,7 @@ main.tickets {
 }
 
 .ticket-container .ticket-instruction span {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   color: #ec5242;
   padding-right: 1rem;
 }
@@ -159,8 +159,7 @@ table::before {
   bottom: -10px;
   left: -10px;
   z-index: -1;
-  background-image: -webkit-gradient(linear, left top, right top, from(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), color-stop(red), color-stop(white), color-stop(blue), to(red));
-  background-image: linear-gradient(to right, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red, white, blue, red);
+  background: repeating-linear-gradient(-45deg, #3f87a6, #ebf8e1, #ec5242 4%, #ec5242 4%);
 }
 
 table tr {
@@ -173,7 +172,7 @@ table tr:first-child {
 
 table td,
 table th {
-  padding: 0.5rem;
+  padding: 0.2rem;
   border: #bababa 1px solid;
 }
 
@@ -191,7 +190,7 @@ table th {
 }
 
 .food-con .top-food h4 {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   background-color: #ededed;
   padding: 1rem;
 }
@@ -216,11 +215,25 @@ table th {
 }
 
 .food-con .bottom-food ul li {
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .none {
   display: none;
+}
+
+.buy-ticket {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: #ec5242;
+  color: #d3d3d3;
+  border-radius: 8px;
+}
+
+.buy-ticket:hover {
+  background-color: #e42a17;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 p,
@@ -322,6 +335,91 @@ th {
   width: 50px;
 }
 
+.top-a {
+  color: #d3d3d3;
+  font-size: 12px;
+}
+
+.top-a:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-bottom {
+  -webkit-box-shadow: #272a31 0 0 15px;
+          box-shadow: #272a31 0 0 15px;
+  background-color: white;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+
+.big-screen-bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.big-screen-bottom ul a {
+  color: #272a31;
+}
+
+.big-screen-bottom ul a.active {
+  color: #ec5242;
+}
+
+.big-screen-bottom ul a:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-bottom img {
+  text-align: center;
+  max-width: 100px;
+  padding: 0.5rem;
+}
+
+.big-screen-top {
+  background-color: #272a31;
+}
+
+.big-screen-top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.big-screen-top ul .fa-facebook-f,
+.big-screen-top ul .fa-twitter {
+  color: #fff;
+}
+
+.big-screen-top ul .fa-facebook-f:hover,
+.big-screen-top ul .fa-twitter:hover {
+  color: #ec5242;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.big-screen-top ul li {
+  margin-right: 1rem;
+}
+
 .main-navigation {
   position: fixed;
   display: -webkit-box;
@@ -379,91 +477,6 @@ th {
   z-index: 999;
   -ms-grid-rows: 1fr 3fr;
       grid-template-rows: 1fr 3fr;
-}
-
-.big-screen-top {
-  background-color: #272a31;
-}
-
-.big-screen-top ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.big-screen-top ul .fa-facebook-f,
-.big-screen-top ul .fa-twitter {
-  color: #fff;
-}
-
-.big-screen-top ul .fa-facebook-f:hover,
-.big-screen-top ul .fa-twitter:hover {
-  color: #ec5242;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.big-screen-top ul li {
-  margin-right: 1rem;
-}
-
-.big-screen-top ul a {
-  color: #d3d3d3;
-  font-size: 12px;
-}
-
-.big-screen-top ul a:hover {
-  color: #ec5242;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.big-screen-bottom {
-  -webkit-box-shadow: #272a31 0 0 15px;
-          box-shadow: #272a31 0 0 15px;
-  background-color: white;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  text-align: center;
-}
-
-.big-screen-bottom ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.big-screen-bottom ul a {
-  color: #272a31;
-}
-
-.big-screen-bottom ul a.active {
-  color: #ec5242;
-}
-
-.big-screen-bottom ul a:hover {
-  color: #ec5242;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.big-screen-bottom img {
-  text-align: center;
-  max-width: 100px;
-  padding: 0.5rem;
 }
 
 .display-nav {
@@ -539,14 +552,14 @@ th {
 }
 
 .card-container h2 {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   text-align: center;
   color: #ededed;
   margin-bottom: 1rem;
 }
 
 .card-container h2 span {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
@@ -586,12 +599,18 @@ th {
   color: #d3d3d3;
 }
 
+.footer-span {
+  border-bottom: #ec5242 3px solid;
+  padding-bottom: 0.5rem;
+  font-family: "Lato", sans-serif;
+}
+
 .speaker-container {
   padding: 3rem 1rem;
 }
 
 .speaker-container h2 {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
 }
 
 .speaker-container .top-speaker-text {
@@ -600,7 +619,7 @@ th {
 }
 
 .speaker-container .top-speaker-text span {
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
   padding-bottom: 0.5rem;
   border-bottom: #ec5242 3px solid;
 }
@@ -685,13 +704,7 @@ th {
 }
 
 .top-footer .partner-nav h3 {
-  font-family: "lato";
-}
-
-.top-footer .partner-nav h3 span {
-  border-bottom: #ec5242 3px solid;
-  padding-bottom: 0.5rem;
-  font-family: "lato";
+  font-family: "Lato", sans-serif;
 }
 
 .top-footer .logo-con {
@@ -753,7 +766,7 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
 }
 
@@ -927,6 +940,12 @@ th {
   table th {
     padding: 1rem;
     border: #bababa 1px solid;
+  }
+  .none {
+    display: block;
+  }
+  .right-footer {
+    padding: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,8 +10,6 @@ th {
   font-family: $secondary-font;
 }
 
- 
-
 // Navigation Bar
 
 // Menu Icon
@@ -106,6 +104,78 @@ th {
     }
   }
 }
+
+.top-a {
+  color: $tertiary-color;
+  font-size: 12px;
+
+  &:hover {
+    color: $secondary-color;
+
+    @include easeOut;
+  }
+}
+
+.big-screen-bottom {
+  box-shadow: $primary-color 0 0 15px;
+  background-color: lighten($tertiary-color, 20);
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      color: $primary-color;
+
+      &.active {
+        color: $secondary-color;
+      }
+
+      &:hover {
+        color: $secondary-color;
+
+        @include easeOut;
+      }
+    }
+  }
+
+  img {
+    text-align: center;
+    max-width: 100px;
+    padding: 0.5rem;
+  }
+}
+
+.big-screen-top {
+  background-color: $primary-color;
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+
+    .fa-facebook-f,
+    .fa-twitter {
+      color: #fff;
+
+      &:hover {
+        color: $secondary-color;
+
+        @include easeOut;
+      }
+    }
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}
+
 // Navigation
 
 .main-navigation {
@@ -156,73 +226,6 @@ th {
   z-index: 999;
   grid-template-rows: 1fr 3fr;
 }
-.big-screen-top {
-  background-color: $primary-color;
-
-  ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: flex-end;
-
-    .fa-facebook-f,
-    .fa-twitter {
-      color: #fff;
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut;
-      }
-    }
-    li {
-      margin-right: 1rem;
-    }
-    a {
-      color: $tertiary-color;
-      font-size: 12px;
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut;
-      }
-    }
-  }
-}
-.big-screen-bottom {
-  box-shadow: $primary-color 0 0 15px;
-  background-color: lighten($tertiary-color, 20);
-  grid-template-columns: 1fr 2fr;
-  text-align: center;
-  
-
-  ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-
-    a {
-      color: $primary-color;
-
-     &.active {
-      color: $secondary-color;
-    }
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut;
-      }
-    }
-  }
-
-  img {
-    text-align: center;
-    max-width: 100px;
-    padding: 0.5rem;
-  }
-}
-
-
 
 // To Make The Nav Items Appear From The Top
 .display-nav {
@@ -286,13 +289,13 @@ th {
   background-color: $primary-color;
 
   h2 {
-    font-family: "lato";
+    font-family: $secondary-font;
     text-align: center;
     color: lighten($tertiary-color, 10);
     margin-bottom: 1rem;
 
     span {
-      font-family: "lato";
+      font-family: $secondary-font;
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }
@@ -327,13 +330,18 @@ th {
   }
 }
 
+.footer-span {
+  border-bottom: $secondary-color 3px solid;
+  padding-bottom: 0.5rem;
+  font-family: $secondary-font;
+}
 // Featured Speakers
 
 .speaker-container {
   padding: 3rem 1rem;
 
   h2 {
-    font-family: "lato";
+    font-family: $secondary-font;
   }
 
   .top-speaker-text {
@@ -341,7 +349,7 @@ th {
     color: $primary-color;
 
     span {
-      font-family: "lato";
+      font-family: $secondary-font;
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }
@@ -399,28 +407,21 @@ th {
   display: flex;
   position: relative;
   padding: 1rem;
-  background-color: darken($primary-color,10);
+  background-color: darken($primary-color, 10);
   color: darken($tertiary-color, 10);
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   .partner-nav {
-      display: flex;
-      padding: 1rem;
+    display: flex;
+    padding: 1rem;
 
-      h3 {
-        font-family: "lato";
-        
-        span {
-          border-bottom: $secondary-color 3px solid;
-          padding-bottom: 0.5rem;
-          font-family: "lato";
-        }
-      }
-
-      
+    h3 {
+      font-family: $secondary-font;
+    }
   }
+
   .logo-con {
     display: grid;
     width: 100%;
@@ -431,8 +432,7 @@ th {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      
-      
+
       h2 {
         font-weight: 100;
         font-size: 1.2rem;
@@ -445,7 +445,7 @@ th {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: lighten($tertiary-color, 20);
-  
+
   .copy {
     text-align: center;
   }
@@ -461,9 +461,8 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 0.5rem;
     text-align: center;
-
   }
 }
 

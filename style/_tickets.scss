@@ -10,30 +10,28 @@ main.tickets {
   align-items: center;
 
   h1 {
-    font-family: "lato";
+    font-family: $secondary-font;
     margin-top: 2rem;
-  
 
-      span {
-        font-family: "lato";
-        padding-bottom: 0.5rem;
-        border-bottom: $secondary-color 3px solid;
-        
-      }
+    span {
+      font-family: $secondary-font;
+      padding-bottom: 0.5rem;
+      border-bottom: $secondary-color 3px solid;
     }
+  }
 
-    .ticket-instruction {
-      border: darken($tertiary-color,10) solid 1px;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      margin-top: 2rem;
+  .ticket-instruction {
+    border: darken($tertiary-color, 10) solid 1px;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin-top: 2rem;
 
-      span {
-        font-family: "lato";
-        color: $secondary-color;
-        padding-right: 1rem;
-      }
+    span {
+      font-family: $secondary-font;
+      color: $secondary-color;
+      padding-right: 1rem;
     }
+  }
 
   .ticket-small-container {
     margin-top: 2rem;
@@ -47,7 +45,7 @@ table {
   border-collapse: collapse;
   position: relative;
   z-index: 2;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -56,43 +54,43 @@ table {
     bottom: -10px;
     left: -10px;
     z-index: -1;
-    background-image: linear-gradient(to right,blue, red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,
-    red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,
-    red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red,white,blue,red);
+    background: repeating-linear-gradient(-45deg, #3f87a6, #ebf8e1, $secondary-color 4%, $secondary-color 4%);
   }
+
   tr {
-    background-color: lighten($tertiary-color,15);
+    background-color: lighten($tertiary-color, 15);
   }
+
   tr:first-child {
-    background-color: lighten($tertiary-color,5);
+    background-color: lighten($tertiary-color, 5);
   }
+
   td,
   th {
-    padding: 0.5rem;
-    border: darken($tertiary-color,10) 1px solid;
+    padding: 0.2rem;
+    border: darken($tertiary-color, 10) 1px solid;
   }
-  
 }
 
 .food-con {
   display: grid;
   grid-template-rows: 1fr 2fr;
   margin-top: 2rem;
-  border: darken($tertiary-color,10) solid 1px;
+  border: darken($tertiary-color, 10) solid 1px;
 
   .top-food {
     text-align: center;
-    
+
     h4 {
-     font-family: "lato";
-     background-color: lighten($tertiary-color,10);
-     padding: 1rem;
+      font-family: $secondary-font;
+      background-color: lighten($tertiary-color, 10);
+      padding: 1rem;
     }
   }
+
   .bottom-food {
-    background-color: lighten($tertiary-color,20);
+    background-color: lighten($tertiary-color, 20);
     display: flex;
-    
 
     ul {
       list-style: none;
@@ -101,12 +99,26 @@ table {
       align-items: center;
 
       li {
-        padding: 1rem 1rem;
+        padding: 0.5rem 0.5rem;
       }
-
     }
   }
 }
+
 .none {
   display: none;
+}
+
+.buy-ticket {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: darken($secondary-color, 10);
+
+    @include easeOut;
+  }
 }
