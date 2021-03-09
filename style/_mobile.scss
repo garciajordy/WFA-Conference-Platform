@@ -70,18 +70,55 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .ticket-container {
+  .navigation-top {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .big-screen-navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "head head";
-    grid-gap: 1rem;
+  }
 
-    h1 {
-      grid-area: head;
-    }
+  .big-screen-bottom {
+    display: grid;
+  }
 
-    td {
-      white-space: nowrap;
+  #logo-con {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .food-con {
+    .bottom-food {
+      ul {
+        li {
+          padding: 1rem 2rem;
+        }
+      }
     }
+  }
+
+  table {
+    td,
+    th {
+      padding: 1rem;
+      border: darken($tertiary-color, 10) 1px solid;
+    }
+  }
+
+  .none {
+    display: block;
+  }
+
+  .right-footer {
+    padding: 2rem;
+  }
+
+  .top-about-container {
+    padding-top: 8rem;
   }
 }

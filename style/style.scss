@@ -5,7 +5,8 @@
 p,
 li,
 a,
-td {
+td,
+th {
   font-family: $secondary-font;
 }
 
@@ -13,7 +14,7 @@ td {
 
 // Menu Icon
 .menu-icon {
-  z-index: 3;
+  z-index: 333;
   width: 25px;
   position: fixed;
   padding: 0.5rem;
@@ -52,7 +53,6 @@ td {
     }
 
     .menu-third {
-      background-color: ivory;
       transform: translate(33px, 8px);
       width: 50px;
     }
@@ -76,7 +76,6 @@ td {
     }
 
     .menu-third {
-      background-color: ivory;
       transform: translate(111px, 8px);
       width: 50px;
     }
@@ -100,12 +99,83 @@ td {
     }
 
     .menu-third {
-      background-color: ivory;
       transform: translate(193px, 8px);
       width: 50px;
     }
   }
 }
+
+.top-a {
+  color: $tertiary-color;
+  font-size: 12px;
+
+  &:hover {
+    color: $secondary-color;
+
+    @include easeOut;
+  }
+}
+
+.big-screen-bottom {
+  box-shadow: $primary-color 0 0 15px;
+  background-color: lighten($tertiary-color, 20);
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      color: $primary-color;
+
+      &.active {
+        color: $secondary-color;
+      }
+
+      &:hover {
+        color: $secondary-color;
+
+        @include easeOut;
+      }
+    }
+  }
+
+  img {
+    text-align: center;
+    max-width: 100px;
+    padding: 0.5rem;
+  }
+}
+
+.big-screen-top {
+  background-color: $primary-color;
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+
+    .fa-facebook-f,
+    .fa-twitter {
+      color: #fff;
+
+      &:hover {
+        color: $secondary-color;
+
+        @include easeOut;
+      }
+    }
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}
+
 // Navigation
 
 .main-navigation {
@@ -122,7 +192,9 @@ td {
   @include easeOut;
 
   .navigation-top {
-    background-color: lighten($primary-color, 5);
+    background-color: lighten($tertiary-color, 15);
+    box-shadow: darken($primary-color, 15) 0 0 10px;
+    z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
@@ -138,15 +210,27 @@ td {
         margin-left: 2.2rem;
 
         a {
-          color: #fff;
+          color: $primary-color;
         }
       }
     }
   }
 }
+
+.big-screen-navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  grid-template-rows: 1fr 3fr;
+}
+
 // To Make The Nav Items Appear From The Top
 .display-nav {
   transform: translate3d(0, 100px, 0);
+  z-index: 99;
 }
 
 // Main
@@ -205,11 +289,13 @@ td {
   background-color: $primary-color;
 
   h2 {
+    font-family: $secondary-font;
     text-align: center;
     color: lighten($tertiary-color, 10);
     margin-bottom: 1rem;
 
     span {
+      font-family: $secondary-font;
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }
@@ -244,16 +330,26 @@ td {
   }
 }
 
+.footer-span {
+  border-bottom: $secondary-color 3px solid;
+  padding-bottom: 0.5rem;
+  font-family: $secondary-font;
+}
 // Featured Speakers
 
 .speaker-container {
   padding: 3rem 1rem;
+
+  h2 {
+    font-family: $secondary-font;
+  }
 
   .top-speaker-text {
     text-align: center;
     color: $primary-color;
 
     span {
+      font-family: $secondary-font;
       padding-bottom: 0.5rem;
       border-bottom: $secondary-color 3px solid;
     }
@@ -307,34 +403,66 @@ td {
 }
 
 // Footer
-footer {
-  display: grid;
+.top-footer {
+  display: flex;
   position: relative;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: "topf topf" "leftf rightf";
   padding: 1rem;
   background-color: darken($primary-color, 10);
   color: darken($tertiary-color, 10);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  .top-footer {
-    grid-area: topf;
+  .partner-nav {
+    display: flex;
+    padding: 1rem;
+
+    h3 {
+      font-family: $secondary-font;
+    }
+  }
+
+  .logo-con {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    padding: 2rem 0;
+
+    .logo-con-1 {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      h2 {
+        font-weight: 100;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.bottom-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: lighten($tertiary-color, 20);
+
+  .copy {
     text-align: center;
   }
 
   .left-footer {
-    grid-area: leftf;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
+    padding: 1rem;
   }
 
   .right-footer {
-    grid-area: rightf;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+    text-align: center;
   }
 }
 
