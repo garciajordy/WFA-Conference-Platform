@@ -98,4 +98,10 @@
   .big-screen-bottom {
     display: grid;
   }
+
+  #logo-con {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
